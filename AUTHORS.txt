@@ -5,3 +5,6 @@
 # Names should be added to this file as:
 # Name or Organization <email address>
 
+Saeed Rezaee (@saeed1339)
+Saber Rastikerdar
+DejaVu Fonts authors

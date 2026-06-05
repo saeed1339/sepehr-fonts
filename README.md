@@ -42,7 +42,7 @@
 
 ---
 
-# My Font
+# Sepehr Fonts
 
 [![][Fontspector]](https://googlefonts.github.io/googlefonts-project-template/fontspector/fontspector-report.html)
 [![][OpenType]](https://googlefonts.github.io/googlefonts-project-template/fontspector/fontspector-report.html)
@@ -57,16 +57,15 @@
 [Outline Correctness]: https://img.shields.io/endpoint?url=https%3A%2F%2Fgooglefonts.github.io%2Fgooglefonts-project-template%2Fbadges%2FOutlineCorrectnessChecks.json
 [Glyphset]: https://img.shields.io/endpoint?url=https%3A%2F%2Fgooglefonts.github.io%2Fgooglefonts-project-template%2Fbadges%2FGlyphsetChecks.json
 
-Description of your font goes here. We recommend to start with a very short presentation line (the kind you would use on twitter to present your project for example), and then add as much details as necesary :-) Origin of the project, idea of usage, concept of creation… but also number of masters, axes, character sets, etc.
 
-Don't hesitate to create images!
-
-![Sample Image](documentation/image1.png)
-![Sample Image](documentation/image2.png)
+![Sample Image 1](documentation/01.png)
+![Sample Image 2](documentation/02.png)
+![Sample Image 3](documentation/03.png)
 
 ## About
 
-Description of you and/or organisation goes here.
+Sepehr is based on the DejaVu fonts by the DejaVu Fonts team, and the Vazir font by Saber Rastikerdar.
+Persian glyphs were redesigned by Saeed Rezaee.
 
 ## Building
 
@@ -86,10 +85,9 @@ When you update your font (new version or new release), please report all notabl
 [Font Versioning](https://github.com/googlefonts/gf-docs/tree/main/Spec#font-versioning) is based on semver.
 Changelog example:
 
-**26 May 2021. Version 2.13**
+**4 June 2026. Version 1.00**
 
-- MAJOR Font turned to a variable font.
-- SIGNIFICANT New Stylistic sets added.
+- Initial OFL publication, following Saeed Rezaee emailing the files to the Google Fonts team to host as a Github project.
 
 ## License
 

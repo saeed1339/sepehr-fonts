@@ -8,6 +8,8 @@ sources:
 familyName: "Sepehr"
 
 buildOTF: false
+buildVariable: true
+outputDir: "../fonts"
 
 stat:
   Sepehr[wght].ttf:

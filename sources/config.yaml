@@ -10,7 +10,6 @@ familyName: "Sepehr"
 buildOTF: false
 buildVariable: true
 outputDir: "../fonts"
-outputDir: "../fonts"
 
 stat:
   Sepehr[wght].ttf:

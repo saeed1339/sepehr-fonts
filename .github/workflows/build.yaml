@@ -55,6 +55,27 @@ jobs:
         run: |
           sed -i -E 's/(_[a-z]+\.uni[0-9A-Fa-f]+)_[0-9]+/\1/g' sources/*.glyphs
           sed -i -E 's/(_[a-z]+)_[0-9]+/\1/g' sources/*.glyphs
+          python3 -c "
+          import os, re
+          def fix_duplicates(filepath):
+              with open(filepath, 'r', encoding='utf-8') as f:
+                  content = f.read()
+              seen = set()
+              pattern = r'lookup\s+(\w+)\s*\{.*?\}\s*\1\s*;'
+              def repl(m):
+                  name = m.group(1)
+                  if name in seen:
+                      return ''
+                  seen.add(name)
+                  return m.group(0)
+              content = re.sub(pattern, repl, content, flags=re.DOTALL)
+              with open(filepath, 'w', encoding='utf-8') as f:
+                  f.write(content)
+              print('Fixed lookups in ' + os.path.basename(filepath))
+          for f in os.listdir('sources'):
+              if f.endswith('.glyphs'):
+                  fix_duplicates(os.path.join('sources', f))
+          "
           make build
 
       - name: Check with fontspector

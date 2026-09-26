@@ -59,9 +59,11 @@ jobs:
     #     do
     #       bumpfontversion sources/$src --new-version $TAG_NAME;
     #     done
-            - name: Fix anchor names
-        run: sed -i 's/_t\.uni0615_[0-9]*/_t/g' sources/*.glyphs
-    - name: Build font
+     name: Build font
+        run: |
+          sed -i 's/_t\.uni0615_[0-9]*/_t/g' sources/*.glyphs
+          make build
+       - name: Build font
       run: make build
     - name: Check with fontspector
       run: make test

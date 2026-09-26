@@ -53,7 +53,8 @@ jobs:
 
       - name: Build font
         run: |
-          sed -i 's/_t\.uni0615_[0-9]*/_t/g' sources/*.glyphs
+          sed -i -E 's/(_[a-z]+\.uni[0-9A-Fa-f]+)_[0-9]+/\1/g' sources/*.glyphs
+          sed -i -E 's/(_[a-z]+)_[0-9]+/\1/g' sources/*.glyphs
           make build
 
       - name: Check with fontspector

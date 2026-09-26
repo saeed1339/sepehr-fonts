@@ -59,21 +59,8 @@ jobs:
     #     do
     #       bumpfontversion sources/$src --new-version $TAG_NAME;
     #     done
-      - name: Fix anchor names
-        run: |
-          python3 -c "
-          import os
-          import re
-          for filename in os.listdir('sources'):
-              if filename.endswith('.glyphs'):
-                  filepath = os.path.join('sources', filename)
-                  with open(filepath, 'r', encoding='utf-8') as f:
-                      content = f.read()
-                  content = re.sub(r'_t\.uni0615_\d+', '_t', content)
-                  with open(filepath, 'w', encoding='utf-8') as f:
-                      f.write(content)
-                  print('Fixed anchors in ' + filename)
-          "
+            - name: Fix anchor names
+        run: sed -i 's/_t\.uni0615_[0-9]*/_t/g' sources/*.glyphs
     - name: Build font
       run: make build
     - name: Check with fontspector

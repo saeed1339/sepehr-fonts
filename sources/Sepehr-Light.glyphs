@@ -561,6 +561,18 @@ uni20B9
 );
 },
 {
+name = fsType;
+value = 0;
+},
+{
+name = fsSelection;
+value = 192;
+},
+{
+name = useTypoMetrics;
+value = 1;
+},
+{
 name = license;
 value = "SIL Open Font License v1.1";
 },
@@ -36570,7 +36582,7 @@ unicode = 20B9;
 instances = (
 {
 name = Light;
-weightClass = Light;
+weightClass = 300;
 }
 );
 kerning = {

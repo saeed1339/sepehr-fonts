@@ -3,15 +3,7 @@ designer: "Saeed Rezaee"
 license: "OFL"
 category: "SANS_SERIF"
 date_added: "2024-06-04"
-fonts {
-  name: "Sepehr"
-  style: "normal"
-  weight: 100
-  filename: "Sepehr-Thin.ttf"
-  post_script_name: "Sepehr-Thin"
-  full_name: "Sepehr Thin"
-  copyright: "Copyright 2024 The Sepehr Project Authors (https://github.com/saeed1339/sepehr-fonts)"
-}
+
 fonts {
   name: "Sepehr"
   style: "normal"
